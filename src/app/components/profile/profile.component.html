@@ -14,6 +14,9 @@
         <div class="col-md-5">
           <ul class="list-group">
             <li class="list-group-items" *ngIf="profile.bio">{{profile.bio}}</li>
+            <li class="list-group-items" *ngIf="profile.hireable"> Available for hire</li>
+            <li class="list-group-items" *ngIf="profile.blog">{{profile.blog}}</li>
+            <li class="list-group-items" *ngIf="profile.email">{{profile.email}}</li>
           </ul>
         </div>
       </div>
