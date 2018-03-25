@@ -9,7 +9,12 @@
     <div class="panel-body">
       <div class="row">
         <div class="col-md-3">
-          <img src="{{profile.avatar_url}}" alt="">
+          <img src="{{profile.avatar_url}}" class="img-responsive img-rounded" alt="avatar">
+        </div>
+        <div class="col-md-5">
+          <ul class="list-group">
+            <li class="list-group-items" *ngIf="profile.bio">{{profile.bio}}</li>
+          </ul>
         </div>
       </div>
     </div>
