@@ -1,3 +1,8 @@
+<form action="">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="search for github users using profilename">
+  </div>
+</form>
 <div *ngIf='profile'>
   <div class="panel pane-default">
     <div class="panel-heading">
@@ -39,10 +44,11 @@
                 <h3 class="panel-title">Repos</h3>
               </div>
               <div class="panel-body" *ngFor="let repo of repos">
-                <p>
+                <p class="clearfix">
                   {{repo.name}}
-                  <a href="{{repo.html_url}}" class="btn btn-danger">View this project on Github</a>
+                  <a href="{{repo.html_url}}" target=" _blank " class="btn btn-danger pull-right">View this project on Github</a>
                 </p>
+                <p>{{repo.description}}</p>
               </div>
             </div>
           </div>
