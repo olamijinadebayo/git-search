@@ -6,15 +6,15 @@ import { ProfileService } from '../../services/profile.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  private profile: any[];
-  private repos: any[];
-  private username: string;
+  public profile: any[];
+  public repos: any[];
+  public username: string;
   constructor(private profileService: ProfileService) {
-    
+
   }
-findProfile(){
-  this.profileService.updateProfile(this.username);
-  this.profileService.getProfileInfo().subscribe(profile => {
+  findProfile() {
+    this.profileService.updateProfile(this.username);
+    this.profileService.getProfileInfo().subscribe(profile => {
       console.log(profile);
       this.profile = profile;
     });
@@ -22,7 +22,7 @@ findProfile(){
       console.log(repos);
       this.repos = repos;
     });
-}
+  }
   ngOnInit() {
   }
 
