@@ -13,7 +13,8 @@ export class ProfileComponent implements OnInit {
     this.profileService.getProfileInfo().subscribe(profile => {
       // console.log(profile);
       this.profile = profile;
-    })
+    });
+
   }
   findProfile() {
     this.profileService.updateProfile(this.username);
