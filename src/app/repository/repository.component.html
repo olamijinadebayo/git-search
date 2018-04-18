@@ -1,3 +1,14 @@
-<p>
-  repository works!
-</p>
+<form class="" action="index.html" method="post">
+  <div class="form-group">
+      <input type="text" class="form-control" placeholder="search for github users using profilename"[(ngModel)] = "username" name = "username" (keyup) = "findProfile()" id ="search">
+  </div>
+</form>
+
+
+<div class="panel-body" *ngFor="let repo of repos">
+  <p class="clearfix">
+    {{repo.name}}
+    <a href="{{repo.html_url}}" target=" _blank " class="btn btn-danger pull-right">View this project on Github</a>
+  </p>
+  <p>{{repo.description}}</p>
+</div>

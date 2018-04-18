@@ -11,10 +11,9 @@ import { RepositoryComponent } from './repository/repository.component';
 import { RouterModule, Routes } from '@angular/router';
 
 // Defining routes
-const routes:Routes=[
-  {path: 'repository', component: RepositoryComponent},
-
-]
+const routes: Routes = [
+  {path: 'repository', component: RepositoryComponent}
+];
 
 @NgModule({
   declarations: [

@@ -42,15 +42,10 @@
             </p>
             <div class="panel panel-default">
               <div class="panel-header">
-                <h3 class="panel-title">Repos</h3>
+
+                <h3 class="panel-title"><a routerLink='/repository' routerLinkActive='active'>Repos</a></h3>
               </div>
-              <!--div class="panel-body" *ngFor="let repo of repos">
-                <p class="clearfix">
-                  {{repo.name}}
-                  <a href="{{repo.html_url}}" target=" _blank " class="btn btn-danger pull-right">View this project on Github</a>
-                </p>
-                <p>{{repo.description}}</p>
-              </div-->
+            
             </div>
           </div>
         </div>
@@ -58,3 +53,4 @@
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>
